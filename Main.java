@@ -21,11 +21,20 @@ public class Main {
         */
 
         //2. Write a program that displays the number of occurrences of an element in the array.
-       /* int array[] = {1, 1, 1, 3, 3, 5};
-        int array2[] = {1, 3, 5, 9};
+       /* 
+       int array[] = {1, 1, 1, 3, 3, 5};
+        System.out.println("the original array is: ");
+       
+        for(int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
 
+        System.out.println("Enter a number to check its occurrences in the array: ");
+        int num = scanner.nextInt();
+        int occurrences= occurrences(array,num );
+        System.out.println(num + " occurs " + occurrences + " time"  + " in the array.");
 
-        occurrences(array, array2);
 
         */
 
@@ -148,18 +157,15 @@ public class Main {
     }
 
 
-    public static void occurrences(int arr[], int arr2[]) {
+    public static int occurrences(int arr[], int num) {
 
-        for (int c : arr2) {
-            int count = 0;
-            for (int i : arr) {
-                if (i == c) {
-                    count++;
-                }
-            }
-
-            System.out.println(c + " " + "occures" + " " + count + " " + "times");
-        }
+         int count = 0;
+       for(int e:arr){
+           if(e==num){
+               count++;
+           }
+       }
+return count;
 
     }
 
